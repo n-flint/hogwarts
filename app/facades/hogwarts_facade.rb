@@ -15,7 +15,8 @@ class HogwartsFacade
   # end
 
   def students
-    conn = Faraday.new("http://hogwarts-it.herokuapp.com/api/v1/house/#{@house}?api_key=alohamora") do |f|
+    test = alohamora
+    conn = Faraday.new("http://hogwarts-it.herokuapp.com/api/v1/house/#{@house}?api_key=#{test}") do |f|
       f.adapter Faraday.default_adapter
     end
     response = conn.get
