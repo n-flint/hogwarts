@@ -1,1 +1,6 @@
-<%= facade.student_count %>
+<%= facade.student_count %> Students
+
+<% facade.students.each do |student| %>
+  <%= student.id %>
+  <%= student.name %>
+<% end %>
