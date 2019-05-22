@@ -1,6 +1,9 @@
-<%= facade.student_count %> Students
+<h2><%= facade.students.count %> Students
 
-<% facade.students.each do |student| %>
-  <%= student.id %>
-  <%= student.name %>
-<% end %>
+<div class='members'>
+  <% facade.students.each do |student| %>
+  <ul class='.single_student'>
+    <li class='name'> <%= student.name %></li>
+    </ul>
+  <% end %>
+</div>
